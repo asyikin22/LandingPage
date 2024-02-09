@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100;1,9..144,100&display=swap" rel="stylesheet">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<style>
+  :root {
+    --white: white;
+    --lightblue: lightblue;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: arial;
+}
+
+body .fixed {
+    position: fixed;
+    width: 100%;
+    padding: 2px;
+    background: lightgreen;
+    text-align: center;
+    font-weight: bold;
+    z-index: 1000;
+}
+
+body {
+    background: var(--lightblue);
+}
+
+#header-img{
+   object-fit: contain;
+}
+
+#nav-bar {
+    background-color: var(--white);
+    width: 100%;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.nav-bar ul {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Fraunces', serif;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+button.login {
+    padding: 20px;
+    width: 10rem;
+    border: black;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button.login:hover {
+    background-color: brown;
+}
+
+/*email section*/
+
+h2 {
+   font-family: 'Fraunces', serif;
+   margin-bottom: 15px;
+   color: brown;
+   font-size: 40px;
+}
+
+.email-div {
+    margin: 3rem;
+    text-align: center;
+}
+
+#email {
+    width: 300px;
+    height: 30px;
+    text-align: center;
+    border-radius: 10px;
+    border: none;
+}
+
+#submit {
+    font-size: 2px;
+    border: none;
+    background: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+}
+
+#submit:hover {
+    background-color: lightyellow;
+
+}
+
+/*feature section*/
+
+.feature-container {
+    display: flex;
+    flex-direction row;
+    justify-content: space-evenly;
+    gap: 25px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.icon {
+    font-size: 60px;
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+    color: brown;
+}
+
+p {
+    text-align: justify;
+    padding: 5px 0;
+}
+
+.video-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    gap: 10px;
+    font-weight: bold;
+}
+
+.styled-line {
+  height: 4px; 
+  background-color: brown; 
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+/*cookies for sale*/
+
+h3.cookie {
+    margin-top: 30px;
+    font-size: 50px;
+    font-family: Fraunces;
+    font-weight: bold;
+    color: brown;
+}
+
+.cookie-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px 10px;
+}
+
+#img-cookie {
+    width: 100%;
+    max-width: 250px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+p.name,
+p.weight,
+p.price {
+    text-align: center;
+    line-height: 15px;
+}
+
+p.name {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+p.weight {
+    font-style: italic;
+}
+
+.card .add-to-cart {
+    width: 100%;
+    font-size: 15px;
+    padding: 10px; /* Optional: Add padding for better appearance */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+    background-color: brown;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer; 
+  }
+
+/*footer section*/
+
+footer {
+    background: var(--white);
+}
+
+.footer-container {
+    width: 70%;
+    margin: 0 auto;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.about-us ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.about-us ul li {
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.about-us ul li:hover {
+    background-color: yellow; /* Change background color on hover */
+    padding: 10px;
+}
+
+/*media query*/
+
+@media (max-width: 375px) {
+    .logo-container {
+        flex-direction: column;
+    }
+
+    #nav-bar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 475px) {
+    #nav-bar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #submit {
+        padding-top: 10px;
+    }
+
+    .feature-container {
+        flex-direction: column;
+    }
+
+    #video {
+        width: 80%;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        padding-bottom: 1rem;
+    }
+
+    .about-us ul {
+        flex-direction: column;
+        padding-top: 1rem;
+    }
+
+    .login {
+        margin: 20px;
+    }
+
+}
+
+@media (max-width: 430px) {
+    .logo-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h3.cookie {
+        font-size: 35px;
+    }
+
+    body .fixed {
+        font-size: 10px;
+    }
+}
+
+</style>
+  <title>Landing Page</title>
+</head>
+<body>
+  <div class="fixed">
+    FREE SHIPPING ON ORDERS OVER RM200 IN EAST MALAYSIA. PLACE YOUR ORDER BEFORE 29/2/2024! 
+</div>
+  <header id="header">
+    <nav id="nav-bar">
+      <div class="logo-container">  
+        <img id="header-img" src="IMAGES/cookie.jpg" alt="logo" width="200px">
+        
+        <div class="nav-bar">
+          <ul>
+            <li><a class="nav-link" href="#ingredient">Ingredient</a></li>
+            <li><a class="nav-link" href="#free-cookies">Free Cookies</a></li>
+            <li><a class="nav-link" href="#shop">Shop</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <button class="login">Login</button>
+      </div>
+
+      </div>
+    </nav>
+  </header>
+
+  <div class="email-div">
+    <h2>Every Cookie is Crafted with Homemade Ingredients &#129321;</h2>
+    <form id="form" action="https://en.wikipedia.org/wiki/Cookie" method="get" target="_blank">
+      <input name="email" type="email" id="email" placeholder="Enter email address">
+      <input id="submit" type="submit" value="Get Started">
+    </form>
+  </div>
+  
+  <div class="feature-container">
+    <section id="ingredient">
+      <div class="icon">
+        <i class='bx bxs-cookie'></i>
+      </div>
+      <h3>Homemade Ingredient</h3>
+      <p>Homemade cookies offer a unique charm that store-bought treats can't match. Made with love in our kitchens, they fill the house with a comforting aroma and bring people together with every delicious bite.</p>
+    </section>
+
+    <section id="free-cookies">
+      <div class="icon">
+        <i class='bx bx-gift'></i>
+      </div>
+      <h3>Free Cookies!</h3>
+      <p>Receive 200g of free cookies with your first purchase! Indulge in our homemade delights crafted with the finest ingredients. It's our warm welcome to deliciousness.</p>
+    </section>
+
+    <section>
+      <div class="icon">
+        <i class='bx bx-cart-alt'></i>
+      </div>
+      <h3>Fast Delivery</h3>
+      <p>Experience convenience like never before with our one-day shipping service. Say goodbye to waiting and hello to instant gratification as your order arrives at your doorstep within just 24 hours. Satisfaction is just a click away! </p>
+    </div>
+
+    <div class="video-container">
+      <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/3vUtRRZG0xY?si=5LnGT6FiwwvcNlbQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <p>Watch how we bake our cookies &#128522</p>
+    </div>
+
+    <hr class="styled-line">
+
+    <h3 class="cookie">Featured Treat This Month</h3>
+    <div  id="shop" class="cookie-container">
+      <div class="card" id="card-1">
+        <img id="img-cookie" src="IMAGES/chocchips.jpg" alt="choc1">
+        <p class="name">Choc cookies</p>
+        <p class="weight">200g</p>
+        <p class="price">RM50</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      
+      <div class="card" id="card-1">
+        <img id="img-cookie" src="IMAGES/chocchips.jpg" alt="choc1">
+        <p class="name">Choc cookies</p>
+        <p class="weight">200g</p>
+        <p class="price">RM50</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+
+      <div class="card" id="card-1">
+        <img id="img-cookie" src="IMAGES/chocchips.jpg" alt="choc1">
+        <p class="name">Choc cookies</p>
+        <p class="weight">200g</p>
+        <p class="price">RM50</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+
+      <div class="card" id="card-1">
+        <img id="img-cookie" src="IMAGES/chocchips.jpg" alt="choc1">
+        <p class="name">Choc cookies</p>
+        <p class="weight">200g</p>
+        <p class="price">RM50</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+
+      <div class="card" id="card-1">
+        <img id="img-cookie" src="IMAGES/chocchips.jpg" alt="choc1">
+        <p class="name">Choc cookies</p>
+        <p class="weight">200g</p>
+        <p class="price">RM50</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+
+      <div class="card" id="card-1">
+        <img id="img-cookie" src="IMAGES/chocchips.jpg" alt="choc1">
+        <p class="name">Choc cookies</p>
+        <p class="weight">200g</p>
+        <p class="price">RM50</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+
+      <div class="card" id="card-1">
+        <img id="img-cookie" src="IMAGES/chocchips.jpg" alt="choc1">
+        <p class="name">Choc cookies</p>
+        <p class="weight">200g</p>
+        <p class="price">RM50</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+
+      <div class="card" id="card-1">
+        <img id="img-cookie" src="IMAGES/chocchips.jpg" alt="choc1">
+        <p class="name">Choc cookies</p>
+        <p class="weight">200g</p>
+        <p class="price">RM50</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+
+      <div class="card" id="card-1">
+        <img id="img-cookie" src="IMAGES/chocchips.jpg" alt="choc1">
+        <p class="name">Choc cookies</p>
+        <p class="weight">200g</p>
+        <p class="price">RM50</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+     
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="about-us">
+        <ul>
+            <li>About Us</li>
+            <li>Careers</li>
+            <li>Privacy Policy</li>
+            <li>Terms of Use</li>
+            <li>Sitemap</li>
+        </ul>
+     </div>
+  
+      <div class="social-media">
+          <img src="IMAGES/social media.jpg" alt="social media" width="180px">
+      </div>
+    </div>
+    
+  </footer>
+
+</body>
+</html>
+
